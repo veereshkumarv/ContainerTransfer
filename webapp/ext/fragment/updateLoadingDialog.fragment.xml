@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	 height="100%">
+	<Dialog id="idUpdateLoading" title="Load" class="sapUiNoContentPadding">
+		<content>
+			<VBox id="idLoadVbox" class="sapUiSmallMarginBeginEnd">
+                <Label text="Container" labelFor="containerInput" />
+                <Input id="containerInput" required="true" />
+                <Label text="Wagon" labelFor="wagonInput" />
+                <Input id="wagonInput" required="true" />
+                <Label text="Slot" labelFor="slotInput" required="true" />
+                <ComboBox id="slotInput" items="3" width="100%">
+				    <core:Item id="slotItem1ID" key="1" text="1" />
+                    <core:Item id="slotItem2ID" key="2" text="2" />
+                    <core:Item id="slotItem3ID" key="3" text="3" />
+			    </ComboBox>
+			</VBox>
+		</content>
+		<buttons>
+			<Button id="btnok" text="OK" press="onActionOKLoad" />
+			<Button id="btncancel" text="Cancel" press="onActionCancel"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

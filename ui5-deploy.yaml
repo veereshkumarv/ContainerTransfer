@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "2.6"
+metadata:
+  name: ContainerTransfer.containertransferapp
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: DS4_BasicAuth
+          url: http://ds4cloudfoundry:443
+        app:
+          name: ZSCM_COTRANAPP
+          description: Container Transfer App
+          package: Z_MG_DEV_PACKAGE
+          transport: DS4K904363
+        exclude:
+          - /test/

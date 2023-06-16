@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	 height="100%">
+	<Dialog id="idUpdateStaging" title="Stage" class="sapUiNoContentPadding">
+		<content>
+			<VBox id="idStageVbox" class="sapUiSmallMarginBeginEnd">
+                <Label text="Location" labelFor="locationInput" />
+                <Input id="locationInput" />
+			</VBox>
+		</content>
+		<buttons>
+			<Button id="btnok" text="OK" press="onActionOKStage" />
+			<Button id="btncancel" text="Cancel" press="onActionCancel"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

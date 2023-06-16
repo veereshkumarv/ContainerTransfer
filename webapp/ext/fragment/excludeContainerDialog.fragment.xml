@@ -1,0 +1,17 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	 height="100%">
+	<Dialog id="idExcludeCont" title="Exclude Container" class="sapUiNoContentPadding">
+		<content>
+			<VBox id="idExcludeContVbox" class="sapUiSmallMarginBeginEnd">
+                <Label text="Scan Container" labelFor="contExcludeInput" class="sapUiTinyMarginTop"/>
+                <Input id="contExcludeInput" required="true" />
+                <Label text="Please Enter Reason for Excluding Container" labelFor="excludeReasonID" class="sapUiTinyMarginTop"/>
+		        <TextArea id="excludeReasonID" required="true" showExceededText="true" maxLength="100" width="100%" valueState="{= ${/value}.length > 100 ? 'Warning' : 'None' }" valueLiveUpdate="false" liveChange="handleLiveChange" />
+			</VBox>
+		</content>
+		<buttons>
+			<Button id="btnok" text="OK" press="onActionOKExcludeCont" />
+			<Button id="btncancel" text="Cancel" press="onActionCancel"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>
